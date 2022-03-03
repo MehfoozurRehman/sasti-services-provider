@@ -1,7 +1,8 @@
 import {View, Text} from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import SplashScreen from 'react-native-splash-screen';
 
 function HomeScreen() {
   return (
@@ -19,6 +20,9 @@ function DetailsScreen() {
 }
 const Stack = createNativeStackNavigator();
 export default function App() {
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">

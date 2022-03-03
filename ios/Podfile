@@ -12,6 +12,8 @@ target 'sasti_services_provider' do
     :hermes_enabled => false
   )
 
+  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
+
   target 'sasti_services_providerTests' do
     inherit! :complete
     # Pods for testing
