@@ -20,6 +20,7 @@ export default function Login({setIsOn, navigation}) {
       </Text>
       <InputBox placeholder="Email Address" />
       <InputBox placeholder="Password" secure={true} />
+
       <TouchableOpacity
         style={{marginLeft: 'auto', marginBottom: 100}}
         onPress={() => {

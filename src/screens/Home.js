@@ -166,7 +166,7 @@ function TabBar({title, selected, setSelected}) {
 }
 
 export default function Home({navigation}) {
-  const [selected, setSelected] = useState('OnGoing');
+  const [selected, setSelected] = useState('Ongoing');
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: '#F2FBF8'}}>
       <View

@@ -2,7 +2,7 @@ import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import {Eye, EyeOff} from 'react-native-feather';
 
-export default function InputBox({secure, placeholder, error}) {
+export default function InputBox({secure, placeholder, error, style}) {
   const [focus, setFocus] = useState(false);
   const [secureTextEntry, setSecureTextEntry] = useState(secure);
   return (
@@ -31,7 +31,13 @@ export default function InputBox({secure, placeholder, error}) {
       <TextInput
         placeholder={placeholder}
         placeholderTextColor={focus ? '#F2FBF8' : '#8D8C8C'}
-        style={{padding: 0, color: '#242424', fontWeight: 'bold', flex: 1}}
+        style={{
+          padding: 0,
+          color: '#242424',
+          fontWeight: 'bold',
+          flex: 1,
+          ...style,
+        }}
         onFocus={() => {
           setFocus(true);
         }}

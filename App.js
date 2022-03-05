@@ -10,6 +10,7 @@ import UploadPicture from './src/screens/UploadPicture';
 import Location from './src/screens/Location';
 import VerificationScreen from './src/screens/VerificationScreen';
 import Home from './src/screens/Home';
+import SignupDetails from './src/screens/SignupDetails';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -40,6 +41,7 @@ export default function App() {
         <Stack.Screen name="Location" component={Location} />
         <Stack.Screen name="Verification" component={VerificationScreen} />
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="SignupDetails" component={SignupDetails} />
       </Stack.Navigator>
     </NavigationContainer>
   );
