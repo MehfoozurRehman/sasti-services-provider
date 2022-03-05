@@ -35,6 +35,9 @@ export default function Login({setIsOn, navigation}) {
         </Text>
       </TouchableOpacity>
       <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('Home');
+        }}
         style={{
           backgroundColor: '#38BA6E',
           width: '100%',
@@ -43,7 +46,7 @@ export default function Login({setIsOn, navigation}) {
           height: 45,
           borderRadius: 10,
         }}>
-        <Text>Login</Text>
+        <Text style={{color: '#ffffff'}}>Login</Text>
       </TouchableOpacity>
       <View
         style={{flexDirection: 'row', justifyContent: 'center', marginTop: 20}}>

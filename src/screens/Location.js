@@ -273,7 +273,7 @@ export default function Location({navigation}) {
               marginTop: 20,
               borderRadius: 10,
             }}>
-            <Text>Save</Text>
+            <Text style={{color: '#ffffff'}}>Save</Text>
           </TouchableOpacity>
         </View>
       </View>

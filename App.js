@@ -8,6 +8,8 @@ import ForgotPassword from './src/screens/ForgotPassword';
 import ChangePassword from './src/screens/ChangePassword';
 import UploadPicture from './src/screens/UploadPicture';
 import Location from './src/screens/Location';
+import VerificationScreen from './src/screens/VerificationScreen';
+import Home from './src/screens/Home';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -36,6 +38,8 @@ export default function App() {
         <Stack.Screen name="ChangePassword" component={ChangePassword} />
         <Stack.Screen name="UploadPicture" component={UploadPicture} />
         <Stack.Screen name="Location" component={Location} />
+        <Stack.Screen name="Verification" component={VerificationScreen} />
+        <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -62,7 +62,7 @@ export default function ForgotPassword({route, navigation}) {
             borderRadius: 10,
             marginTop: 100,
           }}>
-          <Text>Send Recovery Code</Text>
+          <Text style={{color: '#ffffff'}}>Send Recovery Code</Text>
         </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>

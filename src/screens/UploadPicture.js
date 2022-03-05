@@ -104,7 +104,7 @@ export default function UploadPicture({route, navigation}) {
               borderRadius: 10,
               marginTop: 60,
             }}>
-            <Text>Next</Text>
+            <Text style={{color: '#ffffff'}}>Next</Text>
           </TouchableOpacity>
         </ScrollView>
       </ImageBackground>

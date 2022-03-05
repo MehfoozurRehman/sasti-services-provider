@@ -64,7 +64,7 @@ export default function ChangePassword({route, navigation}) {
             borderRadius: 10,
             marginTop: 100,
           }}>
-          <Text>Change Password</Text>
+          <Text style={{color: '#ffffff'}}>Change Password</Text>
         </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
