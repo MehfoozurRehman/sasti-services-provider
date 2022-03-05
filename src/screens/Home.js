@@ -192,7 +192,11 @@ export default function Home({navigation}) {
             </Text>
           </View>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <TouchableOpacity style={{width: 40, height: 40}}>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate('Profile');
+              }}
+              style={{width: 40, height: 40}}>
               <Image
                 style={{width: '100%', height: '100%'}}
                 source={require('../assets/userPic.png')}

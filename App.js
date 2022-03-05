@@ -11,6 +11,9 @@ import Location from './src/screens/Location';
 import VerificationScreen from './src/screens/VerificationScreen';
 import Home from './src/screens/Home';
 import SignupDetails from './src/screens/SignupDetails';
+import Profile from './src/screens/Profile';
+import ProfileEdit from './src/screens/ProfileEdit';
+import ChangeLocation from './src/screens/ChangeLocation';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -42,6 +45,9 @@ export default function App() {
         <Stack.Screen name="Verification" component={VerificationScreen} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="SignupDetails" component={SignupDetails} />
+        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="ProfileEdit" component={ProfileEdit} />
+        <Stack.Screen name="ChangeLocation" component={ChangeLocation} />
       </Stack.Navigator>
     </NavigationContainer>
   );
