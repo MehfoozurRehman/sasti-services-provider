@@ -15,6 +15,9 @@ import Profile from './src/screens/Profile';
 import ProfileEdit from './src/screens/ProfileEdit';
 import ChangeLocation from './src/screens/ChangeLocation';
 import ProjectCardDetails from './src/screens/ProjectCardDetails';
+import PrivacyPolicy from './src/screens/PrivacyPolicy';
+import Notifications from './src/screens/Notifications';
+import TermsAndConditions from './src/screens/TermsAndConditions';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -52,6 +55,12 @@ export default function App() {
         <Stack.Screen
           name="ProjectCardDetails"
           component={ProjectCardDetails}
+        />
+        <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
+        <Stack.Screen name="Notifications" component={Notifications} />
+        <Stack.Screen
+          name="TermsAndConditions"
+          component={TermsAndConditions}
         />
       </Stack.Navigator>
     </NavigationContainer>

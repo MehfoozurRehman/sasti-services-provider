@@ -10,7 +10,7 @@ import React, {useState} from 'react';
 import {MapPin} from 'react-native-feather';
 import Svg, {G, Path} from 'react-native-svg';
 
-function ProjectCard({navigation}) {
+function ProjectCard({navigation, noBtn}) {
   return (
     <TouchableOpacity
       onPress={() => {
@@ -102,37 +102,39 @@ function ProjectCard({navigation}) {
           <Text style={{fontSize: 13, color: '#212121'}}>Address</Text>
         </View>
       </View>
-      <View
-        style={{
-          width: '100%',
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          marginVertical: 20,
-        }}>
-        <TouchableOpacity
+      {noBtn ? null : (
+        <View
           style={{
-            width: '49%',
-            height: 45,
-            backgroundColor: '#FFB743',
-            borderRadius: 20,
-            justifyContent: 'center',
+            width: '100%',
+            flexDirection: 'row',
             alignItems: 'center',
+            justifyContent: 'space-between',
+            marginVertical: 20,
           }}>
-          <Text style={{fontSize: 14, color: '#ffffff'}}>Cancel</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={{
-            width: '49%',
-            height: 45,
-            backgroundColor: '#38BA6E',
-            borderRadius: 20,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}>
-          <Text style={{fontSize: 14, color: '#ffffff'}}>Reschedule</Text>
-        </TouchableOpacity>
-      </View>
+          <TouchableOpacity
+            style={{
+              width: '49%',
+              height: 45,
+              backgroundColor: '#FFB743',
+              borderRadius: 20,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Text style={{fontSize: 14, color: '#ffffff'}}>Cancel</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              width: '49%',
+              height: 45,
+              backgroundColor: '#38BA6E',
+              borderRadius: 20,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Text style={{fontSize: 14, color: '#ffffff'}}>Reschedule</Text>
+          </TouchableOpacity>
+        </View>
+      )}
     </TouchableOpacity>
   );
 }
@@ -373,12 +375,25 @@ export default function Home({navigation}) {
               setSelected={setSelected}
             />
           </View>
-          <ProjectCard navigation={navigation} />
-          <ProjectCard navigation={navigation} />
-          <ProjectCard navigation={navigation} />
-          <ProjectCard navigation={navigation} />
-          <ProjectCard navigation={navigation} />
-          <ProjectCard navigation={navigation} />
+          {selected === 'Ongoing' ? (
+            <>
+              <ProjectCard navigation={navigation} />
+              <ProjectCard navigation={navigation} />
+              <ProjectCard navigation={navigation} />
+              <ProjectCard navigation={navigation} />
+              <ProjectCard navigation={navigation} />
+              <ProjectCard navigation={navigation} />
+            </>
+          ) : (
+            <>
+              <ProjectCard noBtn={true} />
+              <ProjectCard noBtn={true} />
+              <ProjectCard noBtn={true} />
+              <ProjectCard noBtn={true} />
+              <ProjectCard noBtn={true} />
+              <ProjectCard noBtn={true} />
+            </>
+          )}
         </ScrollView>
       </View>
     </SafeAreaView>
