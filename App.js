@@ -14,6 +14,7 @@ import SignupDetails from './src/screens/SignupDetails';
 import Profile from './src/screens/Profile';
 import ProfileEdit from './src/screens/ProfileEdit';
 import ChangeLocation from './src/screens/ChangeLocation';
+import ProjectCardDetails from './src/screens/ProjectCardDetails';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -48,6 +49,10 @@ export default function App() {
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="ProfileEdit" component={ProfileEdit} />
         <Stack.Screen name="ChangeLocation" component={ChangeLocation} />
+        <Stack.Screen
+          name="ProjectCardDetails"
+          component={ProjectCardDetails}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

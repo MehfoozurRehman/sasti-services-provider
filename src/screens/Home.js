@@ -10,9 +10,12 @@ import React, {useState} from 'react';
 import {MapPin} from 'react-native-feather';
 import Svg, {G, Path} from 'react-native-svg';
 
-function ProjectCard() {
+function ProjectCard({navigation}) {
   return (
-    <View
+    <TouchableOpacity
+      onPress={() => {
+        navigation.navigate('ProjectCardDetails');
+      }}
       style={{
         padding: 20,
         backgroundColor: '#ffffff',
@@ -130,7 +133,7 @@ function ProjectCard() {
           <Text style={{fontSize: 14, color: '#ffffff'}}>Reschedule</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
@@ -370,13 +373,12 @@ export default function Home({navigation}) {
               setSelected={setSelected}
             />
           </View>
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          <ProjectCard navigation={navigation} />
+          <ProjectCard navigation={navigation} />
+          <ProjectCard navigation={navigation} />
+          <ProjectCard navigation={navigation} />
+          <ProjectCard navigation={navigation} />
+          <ProjectCard navigation={navigation} />
         </ScrollView>
       </View>
     </SafeAreaView>
