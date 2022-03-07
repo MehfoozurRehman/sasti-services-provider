@@ -172,7 +172,7 @@ export default function Profile({route, navigation}) {
               }}>
               <Layers stroke="#258D51" width={22} height={22} strokeWidth={2} />
               <Text style={{color: '#606060', marginLeft: 10}}>
-                Terms And Conditions
+                Terms & Conditions
               </Text>
             </TouchableOpacity>
           </View>
